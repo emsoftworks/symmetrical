@@ -7070,7 +7070,7 @@ local nigga = (function() -- src/Lua/loader.lua
                     end)()
                 end
                 
-                local Interface = UserInterface:Create{title = "skeet<font color="rgb(227, 246, 255)">.universal</font>',}
+                local Interface = UserInterface:Create{title = 'skeet<font color="rgb(227, 246, 255)">.universal</font>',}
                 
                 do -- src/Lua/Scripts/universal/components/
                     do -- src/Lua/Scripts/universal/components/a_aimassist.lua
