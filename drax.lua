@@ -25,16 +25,16 @@ if not getgenv().load_game then
     getgenv().load_game = "da_hood"
 end
 
-if not isfolder("drax") then
-    makefolder("drax")
+if not isfolder("symmetrical") then
+    makefolder("symmetrical")
 end
 
-if not isfolder("drax/configs") then
-    makefolder("drax/configs")
+if not isfolder("symmetrical/configs") then
+    makefolder("symmetrical/configs")
 end
 
-if not isfolder("drax/configs/da_hood") then
-    makefolder("drax/configs/da_hood")
+if not isfolder("symmetrical/configs/da_hood") then
+    makefolder("symmetrical/configs/da_hood")
 end
 
 -- make services global. self-explanatory.
@@ -191,7 +191,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
     getgenv().uishit = UserInterface
     
     getgenv().theme = {
-        accent = Color3FromRGB(168, 157, 159)
+        accent = Color3FromRGB(227, 246, 255)
     }
     
     getgenv().theme_event = Instance.new('BindableEvent')
@@ -1355,7 +1355,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                         
                             Accent.Name = "Accent"
                             Accent.Parent = ColorpickerContent
-                            Accent.BackgroundColor3 = Color3FromRGB(168, 157, 159)
+                            Accent.BackgroundColor3 = Color3FromRGB(227, 246, 255)
                             Accent.BorderColor3 = Color3FromRGB(0, 0, 0)
                             Accent.Size = UDim2New(1, 0, 0, 1)
                             
@@ -1876,7 +1876,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                                     Inline.Size += UDim2.new(0, 0, 0, 14)
                         
                                     local function Click()
-                                        DBName.TextColor3 = Color3.fromRGB(168, 157, 159)
+                                        DBName.TextColor3 = Color3.fromRGB(227, 246, 255)
                                         Dropdown.FValues[name].Selected = true
                                     end
                         
@@ -2274,7 +2274,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                                     KeybindInline.Visible = false
                                     Keybind:UpdateList()
                         
-                                    KB_Button.TextColor3 = Color3FromRGB(168, 157, 159)
+                                    KB_Button.TextColor3 = Color3FromRGB(227, 246, 255)
                         
                                     if not igr then
                                         pcall(KeybindOptions.Callback, KeybindOptions:GetState())
@@ -2955,7 +2955,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                             local ToggleName = UI["1d"]
                         
                             local TS_ON = tweenService:Create(ToggleStatus, TweenInfo.new(0.2), {
-                                BackgroundColor3 = Color3FromRGB(168, 157, 159)
+                                BackgroundColor3 = Color3FromRGB(227, 246, 255)
                             })
                             local TN_ON = tweenService:Create(ToggleName, TweenInfo.new(0.2), {
                                 TextColor3 = Color3FromRGB(255, 255, 255)
@@ -3387,7 +3387,7 @@ local nigga = (function() -- src/Lua/loader.lua
         MainTitle.BorderSizePixel = 0
         MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-        MainTitle.Text = "drax.dahood"
+        MainTitle.Text = "symmetrical.gay"
         MainTitle.TextStrokeTransparency = 0
         MainTitle.TextSize = 16
         MainTitle.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
@@ -4327,7 +4327,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         end)()
                     end
                     
-                    local Interface = UserInterface:Create{title = 'drax<font color="rgb(168, 157, 159)">.dahood</font>',}
+                    local Interface = UserInterface:Create{title = 'symmetrical<font color="rgb(227, 246, 255)">.dahood</font>',}
                     
                     do -- src/Lua/Scripts/da_hood/components/
                         do -- src/Lua/Scripts/da_hood/components/a_aimassist.lua
@@ -5359,7 +5359,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                     indicatorClass.indicate = value
                                 end })
                                 
-                                local title = indicatorClass:new_indicator("drax.universal")
+                                local title = indicatorClass:new_indicator("symmetrical.universal")
                                 local aim_Ass_character = indicatorClass:new_indicator("no target")
                                 local silent_Ass_character = indicatorClass:new_indicator("no target")
                                 title.changecolor(Color3.fromRGB(170, 170, 255))
@@ -6622,15 +6622,15 @@ local nigga = (function() -- src/Lua/loader.lua
                         end
                         do -- src/Lua/Scripts/da_hood/components/f_settings.lua
                             local config = {
-                                path = "drax/configs/da_hood/",
+                                path = "symmetrical/configs/da_hood/",
                                 file = "",
                                 config_name = ""
                             }
                             function config:get_list()
                                 local config_list = {}
                             
-                                if #listfiles("drax/configs/da_hood") > 0 then
-                                    for i, v in next, listfiles("drax/configs/da_hood") do
+                                if #listfiles("symmetrical/configs/da_hood") > 0 then
+                                    for i, v in next, listfiles("symmetrical/configs/da_hood") do
                                         local ext = '.'..v:split('.')[#v:split('.')];
                                         if ext == '.txt' then
                                             table.insert(config_list, v:split('\\')[#v:split('\\')]:sub(1,-#ext-1))
@@ -6692,19 +6692,19 @@ local nigga = (function() -- src/Lua/loader.lua
                             local theme_section = settingsTab:Section("theme", "right")
                             
                             getgenv().theme = {
-                                accent = Color3FromRGB(168, 157, 159),
-                                scroll = Color3FromRGB(168, 157, 159)
+                                accent = Color3FromRGB(227, 246, 255),
+                                scroll = Color3FromRGB(227, 246, 255)
                             }
                             
                             local old_theme = table.clone(getgenv().theme)
                             local theme_objects = {}
                             
-                            theme_objects["accent"] = theme_section:Colorpicker({ title = "accent", default = Color3.fromRGB(168, 157, 159), transparency = 1, callback = function (value, transparency)
+                            theme_objects["accent"] = theme_section:Colorpicker({ title = "accent", default = Color3.fromRGB(227, 246, 255), transparency = 1, callback = function (value, transparency)
                                 theme.accent = value
                                 theme_event:Fire()
                             end })
                             
-                            theme_objects["scroll"] = theme_section:Colorpicker({ title = "scrollbar", default = Color3.fromRGB(168, 157, 159), transparency = 1, callback = function (value, transparency)
+                            theme_objects["scroll"] = theme_section:Colorpicker({ title = "scrollbar", default = Color3.fromRGB(227, 246, 255), transparency = 1, callback = function (value, transparency)
                                 theme.scroll = value
                                 theme_event:Fire()
                             end })
@@ -7070,7 +7070,7 @@ local nigga = (function() -- src/Lua/loader.lua
                     end)()
                 end
                 
-                local Interface = UserInterface:Create{title = 'drax<font color="rgb(168, 157, 159)">.universal</font>',}
+                local Interface = UserInterface:Create{title = 'symmetrical<font color="rgb(227, 246, 255)">.universal</font>',}
                 
                 do -- src/Lua/Scripts/universal/components/
                     do -- src/Lua/Scripts/universal/components/a_aimassist.lua
@@ -7371,7 +7371,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             new_indicator = function ( self, name )
                                 local shit = {}
                         
-                                local indicattt = DrawingClass({ "Text", { Font = 2, Visible = false, Transparency = 1, Text = name, Outline = true, Center = true, Color = Color3.fromRGB(168, 157, 159), Size = 14 } })
+                                local indicattt = DrawingClass({ "Text", { Font = 2, Visible = false, Transparency = 1, Text = name, Outline = true, Center = true, Color = Color3.fromRGB(227, 246, 255), Size = 14 } })
                         
                                 local dist = self.y_level - 14
                         
@@ -7442,7 +7442,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         end })
                         
                         local aim_Ass_character = fucking_shitty_indicator:new_indicator("no target")
-                        local title = fucking_shitty_indicator:new_indicator("drax.universal")
+                        local title = fucking_shitty_indicator:new_indicator("symmetrical.universal")
                         aim_Ass_character.changecolor(Color3.fromRGB(255,255,255))
                         
                         local randomshit = coroutine.create(function ()
@@ -7908,7 +7908,7 @@ local nigga = (function() -- src/Lua/loader.lua
 end)()
 
 --[[
-local Interface = UserInterface:Create{title = 'fatality<font color="rgb(168, 157, 159)">.dev</font>',}
+local Interface = UserInterface:Create{title = 'fatality<font color="rgb(227, 246, 255)">.dev</font>',}
 
 -- asbcixzyubciyabdiaysbcxzc 
 
