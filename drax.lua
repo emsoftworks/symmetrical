@@ -25,16 +25,16 @@ if not getgenv().load_game then
     getgenv().load_game = "da_hood"
 end
 
-if not isfolder("symmetrical") then
-    makefolder("symmetrical")
+if not isfolder("skeet") then
+    makefolder("skeet")
 end
 
-if not isfolder("symmetrical/configs") then
-    makefolder("symmetrical/configs")
+if not isfolder("skeet/configs") then
+    makefolder("skeet/configs")
 end
 
-if not isfolder("symmetrical/configs/da_hood") then
-    makefolder("symmetrical/configs/da_hood")
+if not isfolder("skeet/configs/da_hood") then
+    makefolder("skeet/configs/da_hood")
 end
 
 -- make services global. self-explanatory.
@@ -3387,7 +3387,7 @@ local nigga = (function() -- src/Lua/loader.lua
         MainTitle.BorderSizePixel = 0
         MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-        MainTitle.Text = "symmetrical.gay"
+        MainTitle.Text = "skeet.em"
         MainTitle.TextStrokeTransparency = 0
         MainTitle.TextSize = 16
         MainTitle.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
@@ -4327,7 +4327,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         end)()
                     end
                     
-                    local Interface = UserInterface:Create{title = 'symmetrical<font color="rgb(227, 246, 255)">.dahood</font>',}
+                    local Interface = UserInterface:Create{title = 'skeet<font color="rgb(227, 246, 255)">.dahood</font>',}
                     
                     do -- src/Lua/Scripts/da_hood/components/
                         do -- src/Lua/Scripts/da_hood/components/a_aimassist.lua
@@ -5359,7 +5359,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                     indicatorClass.indicate = value
                                 end })
                                 
-                                local title = indicatorClass:new_indicator("symmetrical.universal")
+                                local title = indicatorClass:new_indicator("skeet.em")
                                 local aim_Ass_character = indicatorClass:new_indicator("no target")
                                 local silent_Ass_character = indicatorClass:new_indicator("no target")
                                 title.changecolor(Color3.fromRGB(170, 170, 255))
@@ -6622,15 +6622,15 @@ local nigga = (function() -- src/Lua/loader.lua
                         end
                         do -- src/Lua/Scripts/da_hood/components/f_settings.lua
                             local config = {
-                                path = "symmetrical/configs/da_hood/",
+                                path = "skeet/configs/da_hood/",
                                 file = "",
                                 config_name = ""
                             }
                             function config:get_list()
                                 local config_list = {}
                             
-                                if #listfiles("symmetrical/configs/da_hood") > 0 then
-                                    for i, v in next, listfiles("symmetrical/configs/da_hood") do
+                                if #listfiles("skeet/configs/da_hood") > 0 then
+                                    for i, v in next, listfiles("skeet/configs/da_hood") do
                                         local ext = '.'..v:split('.')[#v:split('.')];
                                         if ext == '.txt' then
                                             table.insert(config_list, v:split('\\')[#v:split('\\')]:sub(1,-#ext-1))
@@ -7070,7 +7070,7 @@ local nigga = (function() -- src/Lua/loader.lua
                     end)()
                 end
                 
-                local Interface = UserInterface:Create{title = 'symmetrical<font color="rgb(227, 246, 255)">.universal</font>',}
+                local Interface = UserInterface:Create{title = "skeet<font color="rgb(227, 246, 255)">.universal</font>',}
                 
                 do -- src/Lua/Scripts/universal/components/
                     do -- src/Lua/Scripts/universal/components/a_aimassist.lua
@@ -7442,7 +7442,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         end })
                         
                         local aim_Ass_character = fucking_shitty_indicator:new_indicator("no target")
-                        local title = fucking_shitty_indicator:new_indicator("symmetrical.universal")
+                        local title = fucking_shitty_indicator:new_indicator("skeet")
                         aim_Ass_character.changecolor(Color3.fromRGB(255,255,255))
                         
                         local randomshit = coroutine.create(function ()
